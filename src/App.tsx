@@ -1,3 +1,4 @@
+//@ts-ignore
 import { useState } from 'react'
 //@ts-ignore
 import { CustomThemeProvider } from 'rufous-ui'

@@ -1,11 +1,26 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.node.json"
-    }
+  // "files": [],
+  // "references": [
+  //   {
+  //     "path": "./tsconfig.app.json"
+  //   },
+  //   {
+  //     "path": "./tsconfig.node.json"
+  //   }
+  // ],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": false,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "jsx": "react",
+    "rootDir": "./lib"
+  },
+  "include": [
+    "lib"
   ]
 }

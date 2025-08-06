@@ -1,29 +1,32 @@
 {
   "name": "rufous-ui",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.2.3",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/rufous-ui.umd.cjs",
-  "module": "./dist/rufous-ui.js",
+  "sideEffects": false,
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/rufous-ui.js",
-      "require": "./dist/rufous-ui.umd.cjs"
+      "import": "./dist/main.js",
+      "require": "./dist/main.cjs"
     }
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsup lib --dts --format esm,cjs --outDir dist --clean",
     "prebuild": "rm -rf dist",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:types": "tsc -p tsconfig.json"
   },
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "rufous-ui": "^0.2.3",
     "vite": "^6.3.5",
     "vite-tsconfig-paths": "^5.1.4"
   },
@@ -37,7 +40,12 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "tsup": "^8.5.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.1"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   }
 }
