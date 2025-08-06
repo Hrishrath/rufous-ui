@@ -1,0 +1,30 @@
+.rufous-showcase {
+  font-family: "Segoe UI", sans-serif;
+  padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  color: #333;
+}
+
+.showcase-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.component-section {
+  margin-bottom: 3rem;
+}
+
+.component-section h2 {
+  margin-bottom: 1rem;
+  max-width: fit-content;
+}
+
+pre {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #2d2d2d;
+}
